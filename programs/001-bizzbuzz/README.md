@@ -12,14 +12,14 @@ Write a COBOL program that prints numbers 1 to 50, but:
 
 ## Acceptance Criteria (Exact Expected Output)
 ```
-1
-2
+ 1
+ 2
 BIZZ
-4
+ 4
 BUZZ
 BIZZ
-7
-8
+ 7
+ 8
 BIZZ
 BUZZ
 11
@@ -78,12 +78,14 @@ PROGRAM-ID. BIZZBUZZ.
 DATA DIVISION.
 WORKING-STORAGE SECTION.
 01 WS-I        PIC 9(2) VALUE 1.
+01 WS-I-DISP   PIC Z9.
 01 WS-MOD3     PIC 9.
 01 WS-MOD5     PIC 9.
 PROCEDURE DIVISION.
     PERFORM VARYING WS-I FROM 1 BY 1 UNTIL WS-I > 50
         COMPUTE WS-MOD3 = FUNCTION MOD(WS-I, 3)
         COMPUTE WS-MOD5 = FUNCTION MOD(WS-I, 5)
+        MOVE WS-I TO WS-I-DISP
         EVALUATE TRUE
             WHEN WS-MOD3 = 0 AND WS-MOD5 = 0
                 DISPLAY "BIZZBUZZ"
@@ -92,7 +94,7 @@ PROCEDURE DIVISION.
             WHEN WS-MOD5 = 0
                 DISPLAY "BUZZ"
             WHEN OTHER
-                DISPLAY WS-I
+                DISPLAY WS-I-DISP
         END-EVALUATE
     END-PERFORM
     STOP RUN.
