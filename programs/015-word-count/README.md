@@ -1,7 +1,7 @@
 # Task 015: Word Count
 
 **Tier:** 🥈 Silver  
-**Issue:** #15
+**Issue:** #20
 
 ## Task
 Write a COBOL program that:

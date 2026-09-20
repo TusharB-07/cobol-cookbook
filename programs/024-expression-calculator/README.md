@@ -1,7 +1,7 @@
 # Task 024: Expression Calculator
 
 **Tier:** 🥇 Gold  
-**Issue:** #24
+**Issue:** #29
 
 ## Task
 Write a COBOL program that:

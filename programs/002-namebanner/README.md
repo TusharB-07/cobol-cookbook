@@ -1,7 +1,7 @@
 # Task 002: Name Banner
 
 **Tier:** 🥉 Bronze  
-**Issue:** #2
+**Issue:** #7
 
 ## Task
 Write a COBOL program that:

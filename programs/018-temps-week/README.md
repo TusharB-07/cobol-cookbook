@@ -1,7 +1,7 @@
 # Task 018: Week's Temperatures
 
 **Tier:** 🥈 Silver  
-**Issue:** #18
+**Issue:** #23
 
 ## Task
 Write a COBOL program that:

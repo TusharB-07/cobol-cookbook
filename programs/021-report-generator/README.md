@@ -1,7 +1,7 @@
 # Task 021: Report Generator
 
 **Tier:** 🥇 Gold  
-**Issue:** #21
+**Issue:** #26
 
 ## Task
 Write a COBOL program that generates a formatted report with:

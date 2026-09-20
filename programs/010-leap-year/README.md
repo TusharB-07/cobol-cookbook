@@ -1,7 +1,7 @@
 # Task 010: Leap Year Checker
 
 **Tier:** 🥉 Bronze  
-**Issue:** #10
+**Issue:** #15
 
 ## Task
 Write a COBOL program that:

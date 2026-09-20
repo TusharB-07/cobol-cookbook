@@ -1,7 +1,7 @@
 # Task 016: Toy Email Validator
 
 **Tier:** 🥈 Silver  
-**Issue:** #16
+**Issue:** #21
 
 ## Task
 Write a COBOL program that:

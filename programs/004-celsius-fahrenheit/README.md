@@ -1,7 +1,7 @@
 # Task 004: °C ↔ °F Converter
 
 **Tier:** 🥉 Bronze  
-**Issue:** #4
+**Issue:** #9
 
 ## Task
 Write a COBOL program that:

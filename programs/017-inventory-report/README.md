@@ -1,7 +1,7 @@
 # Task 017: Inventory Report
 
 **Tier:** 🥈 Silver  
-**Issue:** #17
+**Issue:** #22
 
 ## Task
 Write a COBOL program that:

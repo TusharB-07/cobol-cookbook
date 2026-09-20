@@ -1,7 +1,7 @@
 # Task 001: BizzBuzz 1–50
 
 **Tier:** 🥉 Bronze  
-**Issue:** #1
+**Issue:** #6
 
 ## Task
 Write a COBOL program that prints numbers 1 to 50, but:

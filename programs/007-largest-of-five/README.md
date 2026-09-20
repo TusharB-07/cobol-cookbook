@@ -1,7 +1,7 @@
 # Task 007: Largest of 5 Numbers
 
 **Tier:** 🥉 Bronze  
-**Issue:** #7
+**Issue:** #12
 
 ## Task
 Write a COBOL program that:

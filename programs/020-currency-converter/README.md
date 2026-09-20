@@ -1,7 +1,7 @@
 # Task 020: Currency Converter
 
 **Tier:** 🥈 Silver  
-**Issue:** #20
+**Issue:** #25
 
 ## Task
 Write a COBOL program that:

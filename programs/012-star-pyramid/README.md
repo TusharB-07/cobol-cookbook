@@ -1,7 +1,7 @@
 # Task 012: Star Pyramid
 
 **Tier:** 🥉 Bronze  
-**Issue:** #12
+**Issue:** #17
 
 ## Task
 Write a COBOL program that prints a centered star pyramid with 5 rows.
