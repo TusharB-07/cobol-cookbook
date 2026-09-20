@@ -20,19 +20,43 @@ jobs:
         run: |
           mkdir -p bin
           STATUS=0
-          for f in $(find programs -name '*.cbl' ! -name '*template*'); do
+          mapfile -t FILES < <(find programs -name '*.cbl' ! -name '*template*' | sort)
+          for f in "${FILES[@]}"; do
+            BASENAME=$(basename "$f" .cbl)
+            DIRNAME=$(dirname "$f")
+            BIN="bin/${BASENAME}"
+
             echo "::group::🔧 Compiling $f"
-            cobc -x -free "$f" -o bin/prog || STATUS=1
+            if cobc -x -free "$f" -o "$BIN" 2>&1; then
+              echo "✅ Compile OK"
+            else
+              echo "❌ Compile FAILED"
+              STATUS=1
+            fi
             echo "::endgroup::"
-            if [ $STATUS -eq 0 ]; then
-              DIR=$(dirname "$f")
+
+            # Always attempt run if compile succeeded (even if prior programs failed)
+            if [ -f "$BIN" ]; then
               echo "::group::▶ Running $f"
-              if [ -f "$DIR/test-input.txt" ]; then
-                timeout 10 ./bin/prog < "$DIR/test-input.txt" || STATUS=1
+              if [ -f "$DIRNAME/test-input.txt" ]; then
+                echo "Using test-input.txt"
+                if timeout 10 "$BIN" < "$DIRNAME/test-input.txt" 2>&1; then
+                  echo "✅ Run OK"
+                else
+                  echo "❌ Run FAILED (exit code: $?)"
+                  STATUS=1
+                fi
               else
-                timeout 10 ./bin/prog || STATUS=1
+                echo "No test-input.txt, running without input"
+                if timeout 10 "$BIN" 2>&1; then
+                  echo "✅ Run OK"
+                else
+                  echo "❌ Run FAILED (exit code: $?)"
+                  STATUS=1
+                fi
               fi
               echo "::endgroup::"
             fi
           done
+          echo "Final STATUS=$STATUS"
           exit $STATUS
