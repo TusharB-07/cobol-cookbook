@@ -1,0 +1,38 @@
+name: COBOL CI
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+jobs:
+  compile-and-run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install GnuCOBOL
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y gnucobol
+
+      - name: Compile and run all programs
+        run: |
+          mkdir -p bin
+          STATUS=0
+          for f in $(find programs -name '*.cbl' ! -name '*template*'); do
+            echo "::group::🔧 Compiling $f"
+            cobc -x -free "$f" -o bin/prog || STATUS=1
+            echo "::endgroup::"
+            if [ $STATUS -eq 0 ]; then
+              DIR=$(dirname "$f")
+              echo "::group::▶ Running $f"
+              if [ -f "$DIR/test-input.txt" ]; then
+                timeout 10 ./bin/prog < "$DIR/test-input.txt" || STATUS=1
+              else
+                timeout 10 ./bin/prog || STATUS=1
+              fi
+              echo "::endgroup::"
+            fi
+          done
+          exit $STATUS
