@@ -69,4 +69,4 @@ cobc -x -free programs/001-bizzbuzz/bizzbuzz.cbl -o bizzbuzz
 
 ## Credits
 
-Organised by **SRM FOSS Club** with support from **IBM Z / Senthil**.
+Organised by **SRM FOSS Club** with support from **IBM Z**.
