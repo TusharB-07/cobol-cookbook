@@ -1,7 +1,7 @@
 # Task 011: SRM-FOSS Game
 
 **Tier:** 🥉 Bronze  
-**Issue:** #11
+**Issue:** #16
 
 ## Task
 Write a COBOL program that prints numbers 1 to 100, but:

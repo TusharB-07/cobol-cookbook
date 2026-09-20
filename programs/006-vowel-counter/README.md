@@ -1,7 +1,7 @@
 # Task 006: Vowel Counter
 
 **Tier:** 🥉 Bronze  
-**Issue:** #6
+**Issue:** #11
 
 ## Task
 Write a COBOL program that:

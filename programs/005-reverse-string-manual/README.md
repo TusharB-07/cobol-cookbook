@@ -1,7 +1,7 @@
 # Task 005: Reverse String (No REVERSE Verb)
 
 **Tier:** 🥉 Bronze  
-**Issue:** #5
+**Issue:** #10
 
 ## Task
 Write a COBOL program that:

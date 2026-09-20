@@ -1,7 +1,7 @@
 # Task 003: Simple Interest Calculator
 
 **Tier:** 🥉 Bronze  
-**Issue:** #3
+**Issue:** #8
 
 ## Task
 Write a COBOL program that reads three values from stdin (one per line):

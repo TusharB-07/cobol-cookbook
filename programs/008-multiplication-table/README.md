@@ -1,7 +1,7 @@
 # Task 008: Multiplication Table 1–10
 
 **Tier:** 🥉 Bronze  
-**Issue:** #8
+**Issue:** #13
 
 ## Task
 Write a COBOL program that:

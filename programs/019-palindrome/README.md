@@ -1,7 +1,7 @@
 # Task 019: Palindrome Checker
 
 **Tier:** 🥈 Silver  
-**Issue:** #19
+**Issue:** #24
 
 ## Task
 Write a COBOL program that:

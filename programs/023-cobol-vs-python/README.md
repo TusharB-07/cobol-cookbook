@@ -1,7 +1,7 @@
 # Task 023: COBOL vs Python
 
 **Tier:** 🥇 Gold  
-**Issue:** #23
+**Issue:** #28
 
 ## Task
 Implement the **same task** in both COBOL and Python, then write a comparison README.

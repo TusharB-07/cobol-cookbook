@@ -1,7 +1,7 @@
 # Task 009: Sum of Digits
 
 **Tier:** 🥉 Bronze  
-**Issue:** #9
+**Issue:** #14
 
 ## Task
 Write a COBOL program that:

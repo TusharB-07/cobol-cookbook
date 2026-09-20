@@ -1,7 +1,7 @@
 # Task 022: FizzBuzz via JCL
 
 **Tier:** 🥇 Gold  
-**Issue:** #22
+**Issue:** #27
 
 ## Task
 Create a JCL job that runs a COBOL FizzBuzz program (1-100, 3=FIZZ, 5=BUZZ, both=FIZZBUZZ).
